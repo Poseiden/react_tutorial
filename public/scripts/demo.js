@@ -13,7 +13,7 @@ var MyButtonBox = React.createClass({
 		return (
 			<div>
 				<div>
-					<button onClick={this.handleClick}>Click Me !</button>
+					<button id = 'button' onClick={this.handleClick}>Click Me !</button>
 				</div>
 				<div>
 					<input readOnly='true' type={this.state.type} value={this.state.words} />
@@ -23,7 +23,8 @@ var MyButtonBox = React.createClass({
 	}
 })
 
-ReactDOM.render(
-	<MyButtonBox />,
-	document.getElementById('content')
-	)
+// ReactDOM.render(
+// 	<MyButtonBox />,
+// 	document.getElementById('content')
+// 	)
+export default wrapPageSlider(MyButtonBox);

@@ -5,11 +5,18 @@
   "main": "server.js",
   "dependencies": {
     "body-parser": "^1.4.3",
-    "express": "^4.4.5"
+    "express": "^4.4.5",
+    "react": "^15.0.2"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "enzyme": "^2.2.0",
+    "mocha": "^2.4.5",
+    "istanbul": "^1.0.0-alpha.2",
+    "babel-register": "^6.7.2",
+    "ignore-styles": "^2.0.0"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "istanbul cover _mocha && istanbul check-coverage && echo \"SUCCESS!\" || echo \"FAIL!\"",
     "start": "node server.js"
   },
   "repository": {
